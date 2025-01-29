@@ -1,7 +1,7 @@
 const express=require('express')
 const mongoose=require('mongoose')
 const app=express();
-mongoose.connect('mongodb://localhost:27017/school', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://myUser:myUser@2001@cluster0.5nc8h.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connected to MongoDB');
   })
