@@ -1,7 +1,7 @@
 const express=require('express')
 const mongoose=require('mongoose')
 const app=express();
-mongoose.connect('mongodb+srv://myUser:myUser@2001@cluster0.5nc8h.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://myUser:myUser%402001@cluster0.5nc8h.mongodb.net/myDatabase?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: false })
   .then(() => {
     console.log('Connected to MongoDB');
   })
@@ -82,7 +82,7 @@ app.get('/students/:id', async (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5002;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
